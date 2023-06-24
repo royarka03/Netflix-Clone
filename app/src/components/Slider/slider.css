@@ -1,0 +1,51 @@
+.slider {
+    margin-bottom: 2rem;
+}
+
+.wrapper {
+    position: relative;
+}
+
+.list {
+    display: flex;
+    width: max-content;
+    transition: 0.5s transform ease;
+}
+
+.backIcon, .forwardIcon {
+    position: absolute;
+    height: 9rem;
+    width: 3.3rem;
+    z-index: 999;
+    top: 0;
+    cursor: pointer;
+    color: white;
+}
+
+.forwardIcon {
+    background: rgb(0,0,0);
+    background: linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(36,33,33,0.3) 21%, rgba(0,0,0,0.8) 77%);
+}
+
+.backIcon {
+    background: rgb(0,0,0);
+    background: linear-gradient(270deg, rgba(0,0,0,0) 0%, rgba(36,33,33,0.3) 21%, rgba(0,0,0,0.8) 77%);
+}
+
+.backIcon {
+    left: 0;
+}
+
+.forwardIcon {
+    right: 0;
+}
+
+.arrowicon {
+    padding-top: 3.5rem;
+    padding-left: 0.4rem;
+    color: black;
+}
+
+.unclickable {
+    pointer-events: none;
+}

@@ -1,0 +1,29 @@
+.watchlist-item-wrapper {
+    width: 9rem;
+    margin: 0.7rem
+}
+
+.watchlist-item {
+    background-image: url("../../../public/images/startimg.jpg");
+    background-size: cover;
+    width: 9rem;
+    height: 13rem;
+    background-color: white;
+    color: black;
+    margin-right: 1rem;
+    cursor: pointer;
+    transition: 0.5s;
+    color: white;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.watchlist-item:hover {
+    transform: scale(1.1);
+}
+
+.watchlist-item-footer {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+}

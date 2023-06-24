@@ -1,0 +1,41 @@
+.qna {
+    width: 100%;
+    color: white;
+    margin-bottom: 0.2rem;
+}
+
+.addIcon {
+    /* top: 1rem; */
+    float: right;
+}
+
+.question {
+    border: 0;
+    width: 100%;
+    background-color: rgb(19,33,68);
+    font-size: 1.5rem;
+    color: white;
+    padding: 1.5rem;
+    text-align: left;
+    margin: 0.25rem 0;
+    vertical-align: middle;
+}
+
+.answer {
+    display: none;
+    background-color: rgb(19,33,68);
+    font-size: 1.5rem;
+    color: white;
+    padding: 1rem 1.5rem;
+    text-align: left;
+}
+
+.answer.expand {
+    display: block;
+}
+
+@media (max-width:480px) {
+    .question, .answer {
+        font-size: 1.25rem;
+    }
+}

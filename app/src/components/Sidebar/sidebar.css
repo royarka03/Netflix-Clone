@@ -1,0 +1,44 @@
+.sidebar {
+    height: 100%;
+    width: 100px;
+    position: fixed;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    text-align: center;
+}
+
+.sidebar:hover {
+    background: rgba(0,0,0);
+    background: linear-gradient(270deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.5) 16%, rgba(0,0,0,0.65) 26%, rgba(0,0,0,0.85) 39%, rgba(0,0,0,0.9) 50%, rgba(0,0,0,1) 62%, rgba(0,0,0,1) 76%, rgba(0,0,0,1) 100%);
+}
+
+.barIcons {
+    padding-top: 20vh;
+}
+
+.barIcon {
+    padding: 1.1rem 0;
+    width: 100%;
+    opacity: 50%;
+    cursor: pointer;
+}
+
+.barIcon:hover {
+    opacity: 100%;
+}
+
+@media (max-height: 600px) {
+    .barIcons {
+        padding-top: 0vh;
+    }
+}
+
+@media (max-width: 480px) {
+    .sidebar {
+        width: 50px;
+    }
+    
+    .sidebar img {
+        content: url("../../../public/images/netflix_logo_small.webp");
+    }
+}

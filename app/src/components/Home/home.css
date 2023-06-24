@@ -1,0 +1,11 @@
+.main {
+    margin-left: 100px;
+    color: white;
+    overflow: hidden;
+}
+
+@media (max-width:480px) {
+    .main {
+        margin-left: 50px;
+    }
+}

@@ -1,0 +1,17 @@
+.episodecard {
+    display: flex;
+    margin: 1rem 0;
+}
+
+.episodeimg {
+    flex: 1;
+}
+
+.episodedetails {
+    flex: 3;
+    margin: 0 2rem;
+}
+
+.episodeoverview {
+    color: rgb(155, 150, 150);
+}

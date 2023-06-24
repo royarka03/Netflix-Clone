@@ -1,0 +1,56 @@
+.profile-div {
+    margin: 2rem 1rem;
+}
+
+.avatar {
+    margin-top: 1rem;
+}
+
+.user-details {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 8fr;
+}
+
+.user-details-label {
+    color: #aeabab;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
+    font-size: 1.5rem;
+}
+
+.user-personal-details {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
+    font-size: 1.5rem;
+}
+
+.logout-btn {
+    background-color: rgb(225, 13, 13);
+    padding: 0.5rem 1rem;
+    font-size: 1.2rem;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
+    border-radius: 5px;
+    color: white;
+    font-weight: 600;
+    border: 0;
+    -webkit-transition: background-color 200ms linear;
+    -moz-transition: background-color 200ms linear;
+    -o-transition: background-color 200ms linear;
+    -ms-transition: background-color 200ms linear;
+    transition: background-color 200ms linear;
+}
+
+.logout-btn:hover {
+    background-color: rgb(145, 12, 12);
+}
+
+@media (max-width: 1200px) {
+    .user-details {
+        grid-template-columns: 1fr 4fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .user-details {
+        grid-template-columns: 1fr 3fr;
+    }
+}
