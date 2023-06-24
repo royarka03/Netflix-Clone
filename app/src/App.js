@@ -22,7 +22,7 @@ function App() {
         return cookie.startsWith('usercookie=')
       }).split('=')[1];
       console.log(token);
-      const res = await fetch("http://localhost:4000/user", {
+      const res = await fetch(`${process.env.REACT_APP_BASE_URL}/user`, {
         method: "GET",
         credentials: "include",
         headers: {

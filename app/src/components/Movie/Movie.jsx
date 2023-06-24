@@ -23,7 +23,7 @@ function Movie() {
         let uid = cookies.split('; ').find((cookie) => {
             return cookie.startsWith('uid=')
         }).split('=')[1];
-        fetch("http://localhost:4000/watchlist/add", {
+        fetch(`${process.env.REACT_APP_BASE_URL}/watchlist/add`, {
             method: "POST",
             body: JSON.stringify({
                 itemId: id,
@@ -50,7 +50,7 @@ function Movie() {
         let uid = cookies.split('; ').find((cookie) => {
             return cookie.startsWith('uid=')
         }).split('=')[1];
-        fetch("http://localhost:4000/watchlist/remove", {
+        fetch(`${process.env.REACT_APP_BASE_URL}/watchlist/remove`, {
             method: "POST",
             body: JSON.stringify({
                 itemId: id,
@@ -92,7 +92,7 @@ function Movie() {
             let uid = cookies.split('; ').find((cookie) => {
                 return cookie.startsWith('uid=')
             }).split('=')[1];
-            fetch("http://localhost:4000/watchlist/check", {
+            fetch(`${process.env.REACT_APP_BASE_URL}/watchlist/check`, {
                 method: "POST",
                 body: JSON.stringify({
                     itemId: id,

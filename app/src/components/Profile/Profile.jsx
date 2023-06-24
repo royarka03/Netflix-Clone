@@ -14,7 +14,7 @@ function Profile(props) {
         let token = cookies.split('; ').find((cookie) => {
         return cookie.startsWith('usercookie=')
         }).split('=')[1];
-        fetch("http://localhost:4000/logout", {
+        fetch(`${process.env.REACT_APP_BASE_URL}/logout"-`, {
             method: "GET",
             headers: {
                 "Content-type": "application/json; charset=UTF-8",

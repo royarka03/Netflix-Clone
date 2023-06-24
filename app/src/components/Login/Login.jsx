@@ -8,7 +8,7 @@ function Login() {
     const navigate = useNavigate();
 
     function login() {
-        fetch("http://localhost:4000/login", {
+        fetch(`${process.env.REACT_APP_BASE_URL}/login`, {
             method: "POST",
             body: JSON.stringify({
                 email: email,

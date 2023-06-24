@@ -9,8 +9,6 @@ const User = require("./user");
 const authenticate = require("./authenticate");
 require('dotenv').config();
 
-const CLIENT_URL = "http:/localhost:3000/movie";
-
 const app = express();
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
@@ -18,7 +16,7 @@ app.use(express.json());
 app.use(cookieParser());
 
 app.use(cors({
-    origin: "http://localhost:3000", 
+    origin: process.env.CLIENT_URL, 
     methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
     credentials: true,
 }));
