@@ -8,6 +8,7 @@ const bcrypt = require("bcryptjs");
 const User = require("./user");
 const authenticate = require("./authenticate");
 require('dotenv').config();
+const PORT = process.env.PORT || 4000
 
 const app = express();
 app.use(bodyParser.urlencoded({extended: true}));
@@ -152,6 +153,6 @@ app.post("/watchlist/remove", async (req, res) => {
 });
 
 
-app.listen(4000, () => {
-    console.log("Server started at port 4000");
+app.listen(PORT, () => {
+    console.log(`Server started at port ${PORT}`);
 });
