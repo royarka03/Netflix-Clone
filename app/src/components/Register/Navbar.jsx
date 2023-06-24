@@ -12,7 +12,7 @@ function Navbar() {
         <option value="">English</option>
         <option value="">Hindi</option>
       </select>
-      <Link to="/Login">
+      <Link to="/login">
         <button className="signinbtn">Sign In</button>
       </Link>
     </div>
