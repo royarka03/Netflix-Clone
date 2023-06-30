@@ -15,9 +15,11 @@ function App() {
 
   const [user, setUser] = useState(null);
 
+  const cookies = document.cookie;
+
   useEffect(() => {
+    console.log(cookies);
     const fetchUser = async () => {
-      const cookies = document.cookie;
       let token = cookies.split('; ').find((cookie) => {
         return cookie.startsWith('usercookie=')
       }).split('=')[1];
@@ -41,7 +43,7 @@ function App() {
       })
     }
     fetchUser();
-  }, []);   
+  }, [cookies]);   
 
 
   return (
