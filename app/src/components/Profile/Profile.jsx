@@ -21,7 +21,8 @@ function Profile(props) {
                 "Authorization": token,
                 Accept: "application/json"
             },
-            credentials: "include"
+            credentials: "include",
+            withCredentials: true
         })
         .then(res => res.json())
         .then(json => {
