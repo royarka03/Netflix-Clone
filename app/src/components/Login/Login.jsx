@@ -18,7 +18,8 @@ function Login() {
             headers: {
                 "Content-type": "application/json; charset=UTF-8"
             },
-            credentials: "include"
+            credentials: "include",
+            withCredentials: true
         })
         .then(res => res.json())
         .then(json => {
