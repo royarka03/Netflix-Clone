@@ -60,17 +60,18 @@ app.post("/login", async (req, res) => {
                 res.send({ status:401, message: "Invalid password!"})
             }else{
                 const token = await userValid.generateAuthToken();
+                console.log(app.get("env"));
                 res.cookie("usercookie", token, {
                     expires:new Date(Date.now() + 24*60*60*1000),
                     httpOnly: false,
-                    sameSite: app.get("env") === "development" ? true : "none",
-                    secure: app.get("env") === "development" ? false : true,
+                    sameSite: process.env.NODE_ENV === "development" ? true : "none",
+                    secure: process.env.NODE_ENV === "development" ? false : true,
                 });
                 res.cookie("uid", userValid._id.toString(), {
                     expires:new Date(Date.now() + 24*60*60*1000),
                     httpOnly: false,
-                    sameSite: app.get("env") === "development" ? true : "none",
-                    secure: app.get("env") === "development" ? false : true,
+                    sameSite: process.env.NODE_ENV === "development" ? true : "none",
+                    secure: process.env.NODE_ENV === "development" ? false : true,
                 });
                 res.send({status:201, token:token});
             }
