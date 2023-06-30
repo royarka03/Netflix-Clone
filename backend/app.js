@@ -61,10 +61,12 @@ app.post("/login", async (req, res) => {
             }else{
                 const token = await userValid.generateAuthToken();
                 res.cookie("usercookie", token, {
-                    expires:new Date(Date.now() + 24*60*60*1000)
+                    expires:new Date(Date.now() + 24*60*60*1000),
+                    httpOnly: false
                 });
                 res.cookie("uid", userValid._id.toString(), {
-                    expires:new Date(Date.now() + 24*60*60*1000)
+                    expires:new Date(Date.now() + 24*60*60*1000),
+                    httpOnly: false
                 });
                 res.send({status:201, token:token});
             }
