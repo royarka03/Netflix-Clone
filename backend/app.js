@@ -64,12 +64,14 @@ app.post("/login", async (req, res) => {
                 res.cookie("usercookie", token, {
                     expires:new Date(Date.now() + 24*60*60*1000),
                     httpOnly: false,
+                    domain: process.env.DOMAIN,
                     sameSite: process.env.NODE_ENV === "development" ? true : "none",
                     secure: process.env.NODE_ENV === "development" ? false : true,
                 });
                 res.cookie("uid", userValid._id.toString(), {
                     expires:new Date(Date.now() + 24*60*60*1000),
                     httpOnly: false,
+                    domain: process.env.DOMAIN,
                     sameSite: process.env.NODE_ENV === "development" ? true : "none",
                     secure: process.env.NODE_ENV === "development" ? false : true,
                 });

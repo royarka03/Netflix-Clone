@@ -26,8 +26,8 @@ function Login() {
             console.log(json);
             if(json.status === 201) {
                 console.log("Login successful!!");
-                // navigate(0);
-                // navigate("/");
+                navigate(0);
+                navigate("/");
             }
             else {
                 alert(`${json.message}`);
